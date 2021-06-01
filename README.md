@@ -32,7 +32,7 @@ pip install -r requirements.txt
 ## About other files/ function.
 
 * [`helper_func.py`](helper_func.py) contains those functions that we use in both [`train.py`](train.py) and [`test.py`](test.py).
-* [labelled_pkl](labelled_pkl) cotnains the preprocessed trainng data with their labels in class-wise fashion.
+* [labelled_pkl](labelled_pkl) cotnains the preprocessed trainng data with their labels in class-wise fashion. If not available we can create it in our [`train.py`](train.py) at line __90__ and save it at line __93__.
 * [train_test.txt](train_test.txt) contains the name of images that fall in training set and test set in `80:20` ratio. Also we can generate our own set of train and test just by uncommenting the code in [`train.py`](train.py) at line __83__ and saving it using line __86__.
 * `triplet_loss()` function with margin `0.9` is responsible for our algorithm `FaceNet` training.
 * `get_batch_random()` is again a nice function to generate triplets from the data ([labelled_pkl](labelled_pkl)).
