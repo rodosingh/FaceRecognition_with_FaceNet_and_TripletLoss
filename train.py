@@ -80,18 +80,18 @@ def labeller(global_path_for_images, train_img_names, size = (160, 160)):
 ####################################### Here we save the Train and Test Image Names and Also preprocessed Images along with Labels#################
 
 # split the labels into training and test.
-#train_names, test_names = splitter(image_path)
+train_names, test_names = splitter(image_path)
 
 # save the list of 
-#with open("train_test.txt", "wb") as fp:
-#    pickle.dump({"train_name":train_names, "test_name":test_names}, fp)
+with open("train_test.txt", "wb") as fp:
+    pickle.dump({"train_name":train_names, "test_name":test_names}, fp)
     
 # let's save the array type labelled images.
-#dict_face = labeller(image_path, train_names)
+dict_face = labeller(image_path, train_names)
 
 #save this dictionary with pickle
-#with open("labelled_pkl", "wb") as fp:
-#    pickle.dump(dict_face, fp)
+with open("labelled_pkl", "wb") as fp:
+    pickle.dump(dict_face, fp)
 
 ######################################################## FaceNEt Model Construction#########################################################
 
